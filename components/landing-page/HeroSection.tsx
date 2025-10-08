@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
 const HeroSection = () => (
   <section id="hero" className="w-full py-24 md:py-32 lg:py-40">
     <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -11,16 +13,25 @@ const HeroSection = () => (
         </h1>
         <p className="max-w-xl mx-auto md:mx-0 mt-8 text-lg text-gray-300 md:text-xl">
           Crio automações{" "}
-          <span className="text-blue-400 font-medium">inteligentes</span> para atendimento, vendas e gestão, permitindo que você foque no{" "}
-          <span className="text-blue-400 font-medium">crescimento</span> da sua empresa.
+          <span className="text-blue-400 font-medium">inteligentes</span> para
+          atendimento, vendas e gestão, permitindo que você foque no{" "}
+          <span className="text-blue-400 font-medium">crescimento</span> da sua
+          empresa.
         </p>
         <div className="mt-8">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 text-white font-bold text-lg px-8 py-6 rounded-full transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30"
+          <a
+            href={`https://wa.me/${whatsappNumber}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full"
           >
-            Quero uma Consulta Gratuita
-          </Button>
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 text-white font-bold text-lg px-8 py-6 rounded-full transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30"
+            >
+              Quero uma Consulta Gratuita
+            </Button>
+          </a>
         </div>
       </div>
       <div className="hidden md:block">
