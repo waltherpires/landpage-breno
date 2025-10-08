@@ -33,7 +33,7 @@ const services = [
 
 const ServicesCarousel = () => {
   const plugin = useRef(
-    Autoplay({ delay: 1500, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true })
   );
 
   return (
@@ -65,7 +65,7 @@ const ServicesCarousel = () => {
                 <Card className="bg-slate-800/40 backdrop-blur-sm border border-slate-700 text-center flex flex-col items-center justify-around h-full hover:border-blue-500 transition-all duration-300 group">
                   <CardHeader className="flex flex-col items-center">
                     {service.icon}
-                    <CardTitle className="mt-4 text-xl font-semibold text-white text-center">
+                    <CardTitle className="mt-4 text-xl font-semibold text-white text-center min-w-60">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
