@@ -76,8 +76,6 @@ const ServicesCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="lg:hidden bg-slate-800/40 hover:bg-slate-800/60 hover:text-white backdrop-blur-sm border border-slate-700 text-center hover:border-blue-500 transition-all duration-300 group" />
-          <CarouselNext className="lg:hidden bg-slate-800/40 hover:bg-slate-800/60 hover:text-white backdrop-blur-sm border border-slate-700 text-center hover:border-blue-500 transition-all duration-300 group" />
         </Carousel>
       </div>
     </section>
