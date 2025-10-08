@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import React from "react";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "../ui/sheet";
 
 type NavLinkProps = {
   href: string;
@@ -41,9 +42,28 @@ const Header = () => (
       >
         Fale Conosco
       </Button>
-      <Button variant="ghost" size="icon" className="md:hidden">
-        <Menu className="h-6 w-6 text-white" />
-      </Button>
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <Menu className="h-6 w-6 text-white" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent className="bg-slate-950/80 backdrop-blur-lg border-l border-slate-800 text-white w-3/4 p-6">
+            <nav className="flex flex-col items-start gap-8 pt-16 text-2xl font-medium">
+              <SheetClose asChild>
+                <NavLink href="#services">Serviços</NavLink>
+              </SheetClose>
+              <SheetClose asChild>
+                <NavLink href="#benefits">Benefícios</NavLink>
+              </SheetClose>
+              <SheetClose asChild>
+                <NavLink href="#contact">Contato</NavLink>
+              </SheetClose>
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     </div>
   </header>
 );
