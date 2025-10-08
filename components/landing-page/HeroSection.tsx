@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import React from "react";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
@@ -35,7 +36,9 @@ const HeroSection = () => (
         </div>
       </div>
       <div className="hidden md:block">
-        <img
+        <Image
+          width={600}
+          height={400}
           src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto-format&fit=crop"
           alt="Dashboard com gráficos de análise de dados"
           className="rounded-2xl shadow-2xl shadow-blue-900/40 transform perspective-1000 rotate-y-15 hover:rotate-y-0 transition-transform duration-500"
