@@ -20,10 +20,10 @@ const CTASection = () => (
               href={`https://wa.me/${whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full max-w-xs mx-auto"
+              className="block w-full mx-auto"
             >
               <Button
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 text-white font-bold text-xs md:text-lg px-8 py-6 rounded-full transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30"
+                className="md:min-w-100  max-w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-400 hover:to-blue-600 text-white font-bold text-xs md:text-lg px-8 py-6 rounded-full transition-transform transform hover:scale-105 shadow-lg shadow-blue-500/30"
               >
                 Sim, Quero Automatizar Meu Negócio!
               </Button>
